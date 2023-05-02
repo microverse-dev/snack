@@ -6,6 +6,9 @@
   "keywords": [],
   "author": "Junya Kono <junya03dance@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -16,13 +19,13 @@
     "fix": "gts fix"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.4.6",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
+    "@nextui-org/react": "^1.0.0-beta.12",
+    "alchemy-sdk": "^2.8.2",
     "framer-motion": "^8.2.4",
     "next": "^13.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@types/jest": "^29.2.5",

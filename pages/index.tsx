@@ -1,12 +1,8 @@
-import {Text} from '@chakra-ui/react';
 import {NextPage} from 'next';
+import {Index} from '@components/pages/index/index';
 
 const Top: NextPage = () => {
-  return (
-    <Text color="red" textStyle="default-dense-40">
-      Hello World
-    </Text>
-  );
+  return <Index />;
 };
 
 export default Top;

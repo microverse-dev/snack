@@ -1,14 +1,23 @@
-import {ChakraProvider, extendTheme} from '@chakra-ui/react';
+import {NextUIProvider, createTheme} from '@nextui-org/react';
 import type {AppProps} from 'next/app';
-import {breakpoints, styles, textStyles} from '../styles/theme';
+import Head from 'next/head';
 
-const theme = extendTheme({styles, breakpoints, textStyles});
+const theme = createTheme({
+  type: 'dark',
+});
 
 function MyApp({Component, pageProps}: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
+    <NextUIProvider theme={theme}>
+      <Head>
+        <title>📸</title>
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🍟</text></svg>"
+        ></link>
+      </Head>
       <Component {...pageProps} />
-    </ChakraProvider>
+    </NextUIProvider>
   );
 }
 
